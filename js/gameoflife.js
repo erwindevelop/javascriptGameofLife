@@ -1,16 +1,17 @@
 const cvs = document.querySelector("canvas");
 const ctx= cvs.getContext("2d");
 
-cvs.width = 800;
+cvs.width = 1800;
 cvs.height = 800;
 
-const res = 5; /* pixle size */
+const res = 10; /* pixle size */
 
 const columns = cvs.width / res;
 const rows = cvs.height / res;
 
 var gen = 0; /* keep track of Grids */
 
+/* the initial grid */
 var grid = new Array(columns).fill(null).map(() =>
     new Array(rows).fill(null).map(() =>
         Math.floor(Math.random() * 2)
@@ -35,7 +36,7 @@ function createNextGenGrid(prevGrid)
                 {
                     if(i == 0 && j == 0)
                     {
-                        continue; /*nothing to see here */
+                        continue; /* nothing to see here */
                     }
 
                     let x = column + i;
