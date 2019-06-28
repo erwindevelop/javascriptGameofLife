@@ -51,7 +51,7 @@ function createNextGenGrid(prevGrid)
             }
             
             if(cell == 1 && (neighbors < 2 || neighbors > 3)) nextGrid[column][row] = 0;
-            if(cell == 0 && neighbors == 3)nextGrid[column][row] = 1;
+            if(cell == 0 && neighbors == 3) nextGrid[column][row] = 1;
         }
     }
 
